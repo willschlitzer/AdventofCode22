@@ -127,4 +127,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/day1/elf_list.txt
