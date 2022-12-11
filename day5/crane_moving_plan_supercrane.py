@@ -1,4 +1,5 @@
 import pandas as pd
+
 raw_pack_list = []
 
 stack1 = "TPZCSLQN"
@@ -29,8 +30,8 @@ with open("moving_plan.txt", "r") as f:
 for move in moving_list:
     move_count = move[0]
     move_count_index = -1 * move_count
-    origin_loc = move[1]-1
-    target_loc = move[2]-1
+    origin_loc = move[1] - 1
+    target_loc = move[2] - 1
     moving_part = original_layout[origin_loc][move_count_index:]
     remaining_part = original_layout[origin_loc][:move_count_index]
     original_layout[target_loc].append(moving_part)
@@ -38,5 +39,3 @@ for move in moving_list:
 
 for stack in original_layout:
     print(stack[-1])
-
-
